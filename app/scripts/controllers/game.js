@@ -59,7 +59,12 @@ angular.module('yoEloApp')
           var oldScore = currentPlayer.score;
           currentPlayer.score += eloChange;
           currentPlayer.gamesPlayed += 1;
-          currentPlayer.eloChange = eloChange;
+          if (eloChange < 0) {
+            currentPlayer.eloChange = eloChange;
+          } else {
+            currentPlayer.eloChange = '+' + eloChange;
+          }
+
 
           console.log(
               currentPlayer.email,

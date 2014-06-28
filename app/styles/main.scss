@@ -106,6 +106,7 @@ body {
     -webkit-transition: .3s ease all;
     transition: .3s ease all;
     height:1000px;
+    margin-left: 14px;
 
 }
 
@@ -129,4 +130,8 @@ body {
 .add-game {
   width: 220px !important;
   margin-left: -16px;
+}
+
+.cursor {
+  cursor: pointer;
 }
