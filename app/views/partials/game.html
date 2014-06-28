@@ -70,7 +70,7 @@
 
 
 
-
+<!-- <a href="" ng-click="reverse=!reverse;order('score',reverse)">score</a> -->
 <table class="table table-hover">
   <thead>
     <tr>
@@ -80,7 +80,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="u in game.players track by $index | orderBy: 'score'">
+    <tr ng-repeat="u in playerList track by $index">
       <td>{{$index + 1}}</td>
       <td>{{u.email}}</td>
       <td>{{u.score}}   <span class="label label-success" ng-if="u.eloChange > 0">{{u.eloChange}}</span>

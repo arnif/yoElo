@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('yoEloApp')
-  .controller('GameCtrl', function ($scope, $http, $routeParams, $modal) {
+  .controller('GameCtrl', function ($scope, $http, $routeParams, $modal, $filter) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    var orderBy = $filter('orderBy');
 
     // $('#myModal').appendTo('body');
 
@@ -26,11 +28,18 @@ angular.module('yoEloApp')
             }
           }
         }
+        $scope.order('-score',false);
 
       });
     }
 
     populatePlayers();
+
+    $scope.order = function(predicate, reverse) {
+      console.log(predicate);
+      console.log($scope.game);
+      $scope.playerList = orderBy($scope.playerList, predicate, reverse);
+    };
 
     $scope.winners = [];
 
