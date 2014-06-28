@@ -36,8 +36,6 @@ angular.module('yoEloApp')
     populatePlayers();
 
     $scope.order = function(predicate, reverse) {
-      console.log(predicate);
-      console.log($scope.game);
       $scope.playerList = orderBy($scope.playerList, predicate, reverse);
     };
 
