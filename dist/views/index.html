@@ -11,8 +11,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/052faa7f.vendor.css"/>
-    <link rel="stylesheet" href="styles/d07ea80f.main.css"/>
+    <link rel="stylesheet" href="styles/vendor.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
   </head>
   <body ng-app="yoEloApp">
     <!--[if lt IE 7]>
@@ -40,8 +40,20 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <script src="scripts/cd57ecec.vendor.js"></script>
+    <script src="scripts/vendor.js"></script>
 
-        <script src="scripts/d5e5a22e.scripts.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/navbar.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/signup.js"></script>
+        <script src="scripts/controllers/settings.js"></script>
+        <script src="scripts/controllers/game.js"></script>
+        <script src="scripts/services/auth.js"></script>
+        <script src="scripts/services/session.js"></script>
+        <script src="scripts/services/user.js"></script>
+        <script src="scripts/directives/mongooseError.js"></script>
+        <script src="scripts/directives/ngenter.js"></script>
+        <script src="scripts/directives/focus.js"></script>
 </body>
 </html>
