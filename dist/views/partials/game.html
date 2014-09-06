@@ -76,6 +76,9 @@
       <th>#</th>
       <th>Email</th>
       <th>Score</th>
+      <th>Played</th>
+      <th>Won</th>
+      <th>Ratio</th>
     </tr>
   </thead>
   <tbody>
@@ -84,6 +87,9 @@
       <td>{{u.email}}</td>
       <td>{{u.score}}   <span class="label label-success" ng-if="u.eloChange > 0">{{u.eloChange}}</span>
       <span class="label label-warning" ng-if="u.eloChange < 0">{{u.eloChange}}</span></td>
+      <td>{{u.gamesPlayed}}</td>
+      <td>{{u.timesWon}}</td>
+      <td>{{(u.timesWon / u.gamesPlayed) * 100 | number:1 }} %</td>
     </tr>
   </tbody>
 </table>

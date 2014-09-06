@@ -46,8 +46,9 @@ angular.module('yoEloApp')
       //calculate elo and post to server.
       console.log(winners);
 
-
       var players = winners;
+
+      players[0].timesWon = 1;
 
       angular.forEach(players, function(currentPlayer, i) {
           var eloChange = 0;

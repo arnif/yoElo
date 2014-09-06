@@ -10,7 +10,8 @@ var GameSchema = new Schema({
   name: String,
   players: [{ email : String,
               score: Number,
-              gamesPlayed: Number }]
+              gamesPlayed: Number,
+              timesWon: Number }]
 });
 
 /**
